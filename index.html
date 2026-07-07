@@ -727,7 +727,7 @@
           <p
             id="load-1"
             style="
-              opacity: 0;
+              opacity: 1;
               transition: 1s;
               position: absolute;
               font-size: 1.2rem;
@@ -811,7 +811,7 @@
             transition: 1s;
           "
         >
-          D
+          Dishaaaaa
         </h2>
         <button id="btn-3" class="btn" style="margin-top: 60px">
           Aage badho
@@ -973,42 +973,60 @@
       <!-- S7: SCATTER COLLAGE -->
       <div id="screen-7" class="screen">
         <div class="scatter-container">
-          <!-- 🖼️ IMAGES 5 to 11 -->
+          <!-- 🖼️ IMAGES 5 to 14 -->
           <img
-            src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=400&q=80"
+            src="img/1.jpeg"
             class="scatter-img"
             style="top: 5%; left: 5%; --rot: rotate(-12deg)"
           />
           <img
-            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80"
+            src="img/2.jpeg"
             class="scatter-img"
             style="top: 15%; right: 5%; --rot: rotate(15deg)"
           />
           <img
-            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80"
+            src="img/3.jpeg"
             class="scatter-img"
             style="top: 35%; left: 2%; --rot: rotate(5deg)"
           />
           <img
-            src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80"
+            src="img/4.jpeg"
             class="scatter-img"
             style="top: 45%; right: 2%; --rot: rotate(-10deg)"
           />
           <img
-            src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80"
+            src="img/5.jpeg"
             class="scatter-img"
             style="bottom: 25%; left: 10%; --rot: rotate(-20deg)"
           />
           <img
-            src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=400&q=80"
+            src="img/6.jpeg"
             class="scatter-img"
             style="bottom: 15%; right: 15%; --rot: rotate(22deg)"
           />
           <img
-            src="https://images.unsplash.com/photo-1505909182942-e2f09aee3e89?auto=format&fit=crop&w=400&q=80"
+            src="img/7.jpeg"
             class="scatter-img"
             style="bottom: 5%; left: 30%; --rot: rotate(-5deg)"
           />
+
+          <!-- NEW IMAGES ADDED HERE -->
+          <img
+            src="img/8.jpeg"
+            class="scatter-img"
+            style="top: 10%; left: 45%; --rot: rotate(-8deg)"
+          />
+          <img
+            src="img/9.jpeg"
+            class="scatter-img"
+            style="bottom: 40%; right: 48%; --rot: rotate(18deg)"
+          />
+          <img
+            src="img/10.jpeg"
+            class="scatter-img"
+            style="bottom: 28%; right: 35%; --rot: rotate(-14deg)"
+          />
+
           <h2 id="scatter-quote" class="script center-quote">
             Itni saari paagal yaadein...
           </h2>
@@ -1267,15 +1285,15 @@
           Mujhe pata hai yeh teri favorite dhun hai...
         </p>
         <div id="guitar-box" class="media-container">
-          <!-- 🎥 VIDEO 1 -->
-          <video
-            id="guitar-vid"
+          <!-- 🎵 AUDIO 1 -->
+          <img
+            src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=800&q=80"
             class="app-video"
-            controls
-            poster="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=800&q=80"
-          >
-            <source src="your-guitar-video.mp4" type="video/mp4" />
-          </video>
+            style="margin-bottom: 15px"
+          />
+          <audio id="guitar-audio" controls style="width: 100%">
+            <source src="tumhare-hi-rahenge-hum.mpeg" type="audio/mpeg" />
+          </audio>
           <p style="margin-top: 15px; font-size: 0.9rem; color: #ffd700">
             <i class="ph-fill ph-heart"></i> Maine bajaya hai
           </p>
@@ -1326,10 +1344,16 @@
             style="font-size: 4rem; color: #ffb7b2"
           ></i>
           <h3 class="serif" style="font-size: 1.8rem; margin: 15px 0">
-            Favorite Chocolate Coupon
+            Unlimited Time & Chocolate Coupon
           </h3>
-          <p style="color: #ddd">
-            Zindagi bhar teri favorite chocolates ke liye valid. ❤️
+          <p style="color: #ddd; margin-bottom: 10px">
+            Zindagi bhar teri chocolates ke liye valid. 🍫
+          </p>
+          <p style="color: #bbb; font-size: 0.95rem; line-height: 1.6">
+            Pata hai mujhe ki tujhe paise ya materialistic cheezein pasand nahi,
+            isliye meri taraf se yeh... Main chahe kuch bhi kar raha hoon, I am
+            always available for you. Kabhi bhi call ya text kar lena, bina
+            soche. Hamesha tere saath khada rahunga, no matter what. ❤️
           </p>
         </div>
         <button
@@ -1839,15 +1863,17 @@
       };
 
       async function runScreen13() {
-        if (isPlaying) toggleMusic();
         await wait(500);
-        show(qs("#guitar-box"));
-        await wait(2000);
-        show(qs("#btn-13"));
+        show(qs("#guitar-box")); // This fades in the image and audio player
+        await wait(1500);
+        show(qs("#btn-13")); // This fades in the next button
       }
       // qs('#btn-13').onclick = () => { qs('#guitar-vid').pause(); gotoScreen('#screen-13', '#screen-14'); runScreen14(); };
       qs("#btn-13").onclick = () => {
-        qs("#guitar-vid").pause();
+        qs("#guitar-audio").pause();
+        if (wasMusicPlaying && !isPlaying) {
+          toggleMusic();
+        }
         gotoScreen("#screen-13", "#screen-15");
         runScreen15();
       };
@@ -2024,6 +2050,32 @@
         await wait(1000);
         qs("#final-dedication").classList.add("visible");
       };
+
+      // --- SMART GUITAR AUDIO LOGIC ---
+      const guitarAudio = qs("#guitar-audio");
+      let wasMusicPlaying = false; // To remember if bg music was on before playing audio
+
+      // When she clicks PLAY on the guitar audio
+      guitarAudio.onplay = () => {
+        wasMusicPlaying = isPlaying; // Remember the current state
+        if (isPlaying) {
+          toggleMusic(); // Pause background music
+        }
+      };
+
+      // When the audio ENDS or she PAUSES it manually
+      guitarAudio.onpause = () => {
+        if (wasMusicPlaying && !isPlaying) {
+          toggleMusic(); // Resume background music
+        }
+      };
+
+      guitarAudio.onended = () => {
+        if (wasMusicPlaying && !isPlaying) {
+          toggleMusic(); // Resume background music
+        }
+      };
+      // --------------------------------------
     </script>
   </body>
 </html>
